@@ -11,7 +11,16 @@
 <body>
     <div id="instruction">Scan the marker to see the food items in AR! not sure .....</div>
 
-    <a-scene embedded arjs>
+    <a-scene embedded arjs="debugUIEnabled: true;">
+
+        <a-marker preset="hiro">
+            <a-entity 
+            gltf-model="models/burger.glb" 
+            scale="0.4 0.4 0.4" 
+            position="0 0 0">
+        </a-entity>
+        </a-marker>
+
         <!-- Burger Model -->
         <a-marker type="pattern" url="assets/pattern-burger.patt">
             <a-entity 
