@@ -3,42 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AR Menu - Restaurant</title>
+    <title>AR.js Test</title>
     <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
     <script src="https://cdn.jsdelivr.net/gh/jeromeetienne/ar.js/aframe/build/aframe-ar.min.js"></script>
-    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="instruction">Scan the marker to see the food items in AR!</div>
-
     <a-scene embedded arjs="debugUIEnabled: true;">
-
         <a-marker preset="hiro">
-            <a-entity 
-            gltf-model="models/burger.glb" 
-            scale="0.4 0.4 0.4" 
-            position="0 0 0">
-        </a-entity>
+            <a-box position="0 0.5 0" material="color: red;"></a-box>
         </a-marker>
-
-        <!-- Burger Model -->
-        <a-marker type="pattern" url="assets/pattern-burger.patt">
-            <a-entity 
-                gltf-model="models/burger.glb" 
-                scale="0.4 0.4 0.4" 
-                position="0 0 0">
-            </a-entity>
-        </a-marker>
-
-        <!-- Pizza Model -->
-        <a-marker type="pattern" url="assets/pattern-pizza.patt">
-            <a-entity 
-                gltf-model="models/pizza.glb" 
-                scale="0.5 0.5 0.5" 
-                position="0 0 0">
-            </a-entity>
-        </a-marker>
-
         <a-camera position="0 0 0"></a-camera>
     </a-scene>
 </body>
